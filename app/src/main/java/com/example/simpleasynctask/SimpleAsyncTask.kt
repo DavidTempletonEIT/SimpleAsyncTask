@@ -8,7 +8,7 @@ import kotlin.random.Random
 
 private var mTextView: WeakReference<TextView> = TODO()
 
-class SimpleAsyncTask : AsyncTask<Void, Void, String>() {
+class SimpleAsyncTask(TextView: TextView?) : AsyncTask<Void, Void, String>() {
     override fun doInBackground(vararg params: Void?): String {
         val r = Random
         val n: Int = r.nextInt(11)
